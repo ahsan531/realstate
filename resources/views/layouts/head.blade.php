@@ -27,6 +27,9 @@
 @if (Request::path() == 'addcustomer' || Request::route()->getName() == 'editcustomer' )
 <link rel="stylesheet" href="{{asset('assets/css/addcustomer.css')}}" />
 @endif
+@if (Request::path() == 'addbooking'  )
+<link rel="stylesheet" href="{{asset('assets/css/addbooking.css')}}" />
+@endif
 
 
 <!-- Vendors CSS -->
