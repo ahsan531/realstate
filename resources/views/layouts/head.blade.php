@@ -24,10 +24,10 @@
 <link rel="stylesheet" href="{{asset('assets/vendor/css/theme-default.css')}}" class="template-customizer-theme-css" />
 <link rel="stylesheet" href="{{asset('assets/css/demo.css')}}" />
 
-@if (Request::path() == 'addcustomer' || Request::route()->getName() == 'editcustomer' )
+@if (Request::path() == 'addcustomer' || Request::route()->getName() == 'editcustomer' || Request::route()->getName() == 'addbooking' )
 <link rel="stylesheet" href="{{asset('assets/css/addcustomer.css')}}" />
 @endif
-@if (Request::path() == 'addbooking'  )
+@if (Request::path() == 'addbooking'   )
 <link rel="stylesheet" href="{{asset('assets/css/addbooking.css')}}" />
 @endif
 
