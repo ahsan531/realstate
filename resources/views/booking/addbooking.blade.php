@@ -6,6 +6,9 @@
         {{-- <div class="card px-0 pt-4 pb-0 mt-3 mb-3"> --}}
 
 
+
+
+            <script src="{{asset('assets/project/bookings.js')}}"></script>
         <div class="row">
             <div class="col-xl">
                 <div class="card mb-4">
@@ -28,7 +31,7 @@
                                     aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <br> <!-- fieldsets -->
-                                        <fieldset>
+                                        {{-- <fieldset>
                                             <div class="row">
                                                 <h2 class="fs-title">First Customer_Nominee</h2>
                                                 <div class="demo-inline-spacing">
@@ -76,19 +79,16 @@
                                                     <div class="mb-3">
                                                         <label class="form-label" for="residential_address">Residential Address</label> <span class='text-danger'>*</span>
                                                         <div class="input-group input-group-merge">
-                                                            <textarea id="residential_address" name="residential_address" placeholder="Enter Residential Address"
-                                                                class="form-control"></textarea>
+                                                            <textarea id="residential_address" name="residential_address" placeholder="Enter Residential Address" class="form-control"></textarea>
                                                               
                 
                                                         </div>
-                                                        <span style="color: red;  display: none;" id="residential_address1">Enter Residential Address
-                                                        </span>
+                                                        <span style="color: red;  display: none;" id="residential_address1">Enter Residential Address</span>
                                                     </div>
                                                     <div class="mb-3">
                                                         <label class="form-label" for="email">Email</label>
                                                         <div class="input-group input-group-merge">
-                                                            <input type="text" id="email" name="email"
-                                                                placeholder="Enter Landline No" class="form-control">
+                                                            <input type="text" id="email" name="email" placeholder="Enter Landline No" class="form-control">
                 
                                                         </div>
                                                     </div>
@@ -97,56 +97,47 @@
                                                     <div class="mb-3">
                                                         <label class="form-label" for="name">Name</label> <span class='text-danger'>*</span>
                                                         <div class="input-group input-group-merge">
-                                                            <input type="text" id="name" name="name" class="form-control"
-                                                                placeholder="Enter your Name">
+                                                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your Name">
                                                                
                         
                                                         </div>
-                                                        <span style="color: red;  display: none;" id="name1">Enter Your Name
-                                                        </span>
+                                                        <span style="color: red;  display: none;" id="name1">Enter Your Name</span>
                 
                                                     </div>
                                                     <div class="mb-3">
                                                         <label class="form-label" for="cnic">CNIC</label> <span class='text-danger'>*</span>
-                                                        <input type="text" id="cnic" name="cnic"  data-inputmask="'mask': '99999-9999999-9'" class="form-control phone-mask"
-                                                            placeholder="Enter Your CNIC Number">
-                                                            <span style="color: red;  display: none;" id="cnic1">Enter CNIC No
-                                                            </span>
+                                                        <input type="text" id="cnic" name="cnic"  data-inputmask="'mask': '99999-9999999-9'" class="form-control phone-mask" placeholder="Enter Your CNIC Number">
+                                                            <span style="color: red;  display: none;" id="cnic1">Enter CNIC No</span>
                                                     </div>
                                                     <div class="mb-3">
                                                         <label class="form-label" for="ntn">NTN</label>
                                                         <div class="input-group input-group-merge">
-                                                            <input type="text" id="ntn" name="ntn" class="form-control"
-                                                                placeholder="Enter Yoyr NTN">
+                                                            <input type="text" id="ntn" name="ntn" class="form-control" placeholder="Enter Yoyr NTN">
                 
                                                         </div>
                                                     </div>
                                                     <div class="mb-3">
                                                         <label class="form-label" for="mobile_no">Enter Your Mobile Number</label> <span class='text-danger'>*</span>
                                                         <div class="input-group input-group-merge">
-                                                            <input type="text" id="mobile_no" name="mobile_no" class="form-control"
-                                                                placeholder="Enter Yoyr Mobile Number">
+                                                            <input type="text" id="mobile_no" name="mobile_no" class="form-control" placeholder="Enter Yoyr Mobile Number">
                 
                                                         </div>
-                                                        <span style="color: red;  display: none;" id="mobile_no1">Enter Your Mobile Number
-                                                        </span>
+                                                        <span style="color: red;  display: none;" id="mobile_no1">Enter Your Mobile Number</span>
                                                     </div>
                                                     <div class="mb-3">
                                                         <label class="form-label" for="permanent_address">Permanent Address</label> <span class='text-danger'>*</span>
                                                         <div class="input-group input-group-merge">
-                                                            <textarea id="permanent_address" name="permanent_address" placeholder="Enter Permanent Address"
-                                                                class="form-control"></textarea>
+                                                            <textarea id="permanent_address" name="permanent_address" placeholder="Enter Permanent Address" class="form-control"></textarea>
                 
                                                         </div>
-                                                        <span style="color: red;  display: none;" id="permanent_address1">Enter your Permanent Address
-                                                        </span>
+                                                        <span style="color: red;  display: none;" id="permanent_address1">Enter your Permanent Address</span>
                                                     </div>
                 
                                                 </div>
                                             </div>
 
 
-                                        </fieldset>
+                                        </fieldset> --}}
                             <fieldset>
                                 <div class="form-card">
                                     <div class="row">
@@ -292,7 +283,7 @@
                                         </div>
                                         <br>
                                         <div>
-                                            <button type="button" class="btn btn-primary">
+                                            <button type="button" class="btn btn-primary" onclick="add_nominee()">
                                                 Add Nominee
                                             </button>
                                         </div>
@@ -502,6 +493,7 @@
 
                                 </div>
 
+                                <div id="nomee_show"></div>
                                 <br> <br>
                                 <div class="row">
                                     <div class="demo-inline-spacing">
@@ -538,6 +530,8 @@
                                     </div>
                                 </div>
                             </fieldset>
+
+
                         </form>
 
                     </div>
@@ -546,10 +540,12 @@
         </div>
 
 
+
         {{-- </div> --}}
         {{-- </div> --}}
         {{-- </div> --}}
     </div>
+
     <script>
         $(document).ready(function() {
 
